@@ -17,7 +17,7 @@ interface InputProps extends ChakraInputProps {
 
 const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   { name, label, error, ...rest }: InputProps,
-  ref: any,
+  ref: any
 ) => {
   const { colorMode } = useColorMode()
   return (
