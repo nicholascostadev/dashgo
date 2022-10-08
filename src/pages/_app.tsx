@@ -8,9 +8,8 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import { queryClient } from '../services/queryClient'
 
 // only on development mode
-if (process.env.NODE_ENV === 'development') {
-  makeServer()
-}
+// since it'll not have any production usage, it's safe to use it
+makeServer()
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
