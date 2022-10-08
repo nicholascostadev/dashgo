@@ -3,11 +3,13 @@ import { Button, useColorMode } from '@chakra-ui/react'
 interface PaginationButtonProps {
   isCurrent?: boolean
   pageNumber: number
+  onPageChange: (page: number) => void
 }
 
 export const PaginationButton = ({
   isCurrent = false,
   pageNumber,
+  onPageChange,
 }: PaginationButtonProps) => {
   const { colorMode } = useColorMode()
   if (isCurrent)
@@ -34,6 +36,7 @@ export const PaginationButton = ({
       w="4"
       bg={colorMode === 'dark' ? 'gray.700' : 'pink.400'}
       _hover={colorMode === 'dark' ? { bg: 'gray.500' } : { bg: 'pink.500' }}
+      onClick={() => onPageChange(pageNumber)}
     >
       {pageNumber}
     </Button>

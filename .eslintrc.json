@@ -6,8 +6,7 @@
     "extends": [
         "@rocketseat/eslint-config/react"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -16,5 +15,13 @@
         "react"
     ],
     "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto",
+                "singleQuote": true,
+                "semi": false
+            }
+        ]
     }
 }
